@@ -1,0 +1,102 @@
+
+`timescale 1ns/1ps
+
+module alu_tb;
+
+    reg [7:0] A;
+    reg [7:0] B;
+    reg [2:0] sel;
+    wire [7:0] result;
+
+    integer errors;
+
+    alu dut (
+        .A(A),
+        .B(B),
+        .sel(sel),
+        .result(result)
+    );
+
+    task check_result;
+        input [7:0] expected;
+        begin
+            #1;
+            if (result !== expected) begin
+                $display("FAIL: sel=%b expected=%d got=%d",
+                         sel, expected, result);
+                errors = errors + 1;
+            end
+            else begin
+                $display("PASS: sel=%b result=%d",
+                         sel, result);
+            end
+        end
+    endtask
+
+    initial begin
+        errors = 0;
+        A = 8'd5;
+        B = 8'd3;
+
+        // Original 8 tests
+        sel = 3'b000;
+        check_result(8'd8);
+
+        sel = 3'b001;
+        check_result(8'd2);
+
+        sel = 3'b010;
+        check_result(8'd1);
+
+        sel = 3'b011;
+        check_result(8'd7);
+
+        sel = 3'b100;
+        check_result(8'd6);
+
+        sel = 3'b101;
+        check_result(8'd250);
+
+        sel = 3'b110;
+        check_result(8'd0);
+
+        sel = 3'b111;
+        check_result(8'd0);
+
+        // Boundary-value tests
+        A = 8'd255;
+        B = 8'd1;
+        sel = 3'b000;
+        check_result(8'd0);
+
+        A = 8'd0;
+        B = 8'd1;
+        sel = 3'b001;
+        check_result(8'd255);
+
+        A = 8'd255;
+        B = 8'd0;
+        sel = 3'b101;
+        check_result(8'd0);
+
+        A = 8'd0;
+        B = 8'd0;
+        sel = 3'b100;
+        check_result(8'd0);
+
+        A = 8'd255;
+        B = 8'd255;
+        sel = 3'b010;
+        check_result(8'd255);
+
+        $display("--------------------");
+
+        if (errors == 0)
+            $display("ALL TESTS PASSED!");
+        else
+            $display("TESTS FAILED: %0d", errors);
+
+        $finish;
+    end
+
+endmodule
