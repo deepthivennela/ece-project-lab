@@ -1,0 +1,73 @@
+8-Bit Arithmetic Logic Unit (ALU) Using Verilog
+
+Project Overview
+
+This project implements an 8-bit Arithmetic Logic Unit (ALU) using Verilog HDL. The ALU performs arithmetic and bitwise logical operations based on a 3-bit select input.
+
+This is a beginner-friendly digital design project created to learn RTL design, combinational logic, and functional simulation.
+
+Features
+
+- 8-bit input operands: A and B
+- 3-bit operation selector: "sel"
+- 8-bit output: "result"
+- Six defined operations: ADD, SUB, AND, OR, XOR, and NOT A
+- Default output of zero for select codes "110" and "111"
+- Testbench with 13 test cases, including boundary-value tests
+
+Operation Table
+
+Select ("sel")| Operation| Description
+"000"| ADD| A + B
+"001"| SUB| A - B
+"010"| AND| Bitwise AND of A and B
+"011"| OR| Bitwise OR of A and B
+"100"| XOR| Bitwise XOR of A and B
+"101"| NOT A| Bitwise inversion of A
+"110"| Default| Output zero
+"111"| Default| Output zero
+
+Project Files
+
+- "alu.v" — Verilog description of the ALU.
+- "alu_tb.v" — Testbench used to verify the ALU.
+
+Tools Used
+
+- Verilog HDL
+- EDA Playground
+- Icarus Verilog simulator, if selected in EDA Playground
+
+Testing
+
+The testbench checks all eight select codes and five additional boundary-value cases.
+
+Tested cases include:
+
+- Addition: 5 + 3 = 8
+- Subtraction: 5 - 3 = 2
+- Bitwise logical operations
+- Maximum 8-bit unsigned input values
+- Zero inputs
+- 8-bit arithmetic wraparound: 255 + 1 produces 0 because the carry beyond bit 7 is discarded
+
+Simulation status: All 13 test cases passed in the simulation.
+
+Learning Outcomes
+
+- Understanding combinational logic design
+- Writing a Verilog module
+- Using "case" statements for operation selection
+- Creating a Verilog testbench
+- Performing functional simulation and checking outputs
+
+Future Improvements
+
+- Add a carry-out output for arithmetic operations
+- Add status flags such as zero and overflow
+- Extend the design with additional operations
+- Explore synthesis and FPGA implementation
+
+Author
+
+Created as a learning project in digital design and VLSI using Verilog HDL.
