@@ -44,3 +44,6 @@ I am an ECE student interested in Python programming, digital electronics, and V
 - Add user input
 - Improve output formatting
 - Explore digital logic design using Verilog
+## Project Output
+
+![Digital Logic Truth Table Output](screenshots/truth-table-output.png)
