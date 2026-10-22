@@ -19,4 +19,4 @@ Topics
 - Language: Python
 - Purpose: Automatically generates truth tables for AND, OR, and NOT logic gates.
 - Concepts learned: Variables, nested loops, Boolean logic, and output formatting.
-- Testing: Run using the Programiz online Python compiler.
+- Testing: Run using the Programiz online Python compiler..
