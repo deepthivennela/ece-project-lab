@@ -11,12 +11,12 @@ Topics
 - Python programming
 - Digital logic design
 - Verilog HDL
-- Electronics and embedded systems
+- Electronics and embedded
+- Projects
 
-Projects
+1. Digital Logic Truth-Table Generator
 
-Projects will be added as I build, test, and document them.
-
-Learning Approach
-
-Each project will include its objective, implementation, test results, and lessons learned.
+- Language: Python
+- Purpose: Automatically generates truth tables for AND, OR, and NOT logic gates.
+- Concepts learned: Variables, nested loops, Boolean logic, and output formatting.
+- Testing: Run using the Programiz online Python compiler.
