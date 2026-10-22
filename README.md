@@ -1,22 +1,46 @@
-ECE Project Lab
 
-Welcome to my engineering learning portfolio!
+# ECE Project Lab
 
-About
+Welcome to my Electronics and Communication Engineering learning portfolio!
 
-I am an Electronics and Communication Engineering student exploring Python programming, digital electronics, and VLSI design.
+## About Me
 
-Topics
+I am an ECE student interested in Python programming, digital electronics, and VLSI design. I am building practical projects to strengthen my programming and electronics fundamentals.
+
+## Skills and Topics
 
 - Python programming
 - Digital logic design
-- Verilog HDL
-- Electronics and embedded
-- Projects
+- Boolean algebra
+- Verilog HDL — learning
+- Electronics and embedded systems
 
-1. Digital Logic Truth-Table Generator
+## Projects
 
-- Language: Python
-- Purpose: Automatically generates truth tables for AND, OR, and NOT logic gates.
-- Concepts learned: Variables, nested loops, Boolean logic, and output formatting.
-- Testing: Run using the Programiz online Python compiler..
+### 1. Digital Logic Truth-Table Generator
+
+**Language:** Python
+
+**Description:** A beginner-friendly Python program that generates truth tables for six basic digital logic gates.
+
+**Logic gates included:**
+- AND
+- OR
+- XOR
+- NAND
+- NOR
+- NOT
+
+**Concepts learned:**
+- Variables and loops
+- Boolean logic
+- Bitwise operators
+- Output formatting
+
+**Testing:** Tested using the Programiz online Python compiler.
+
+## Future Improvements
+
+- Add user input
+- Improve output formatting
+- Explore digital logic design using Verilog
